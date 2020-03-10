@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="zuul"/>
+<aop-project name="config-server"/>
+<aop-project name="eureka-server"/>
+<aop-project name="loja"/>
+<aop-project name="auth"/>
+</aop-reference-model>

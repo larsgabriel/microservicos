@@ -1,0 +1,27 @@
+package br.com.alura.microservicos.loja.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.alura.microservicos.loja.client.FornecedorClient;
+import br.com.alura.microservicos.loja.dto.CompraDTO;
+import br.com.alura.microservicos.loja.dto.InfoFornecedorDTO;
+import br.com.alura.microservicos.loja.dto.ItensDaCompraDTO;
+
+@Service
+public class CompraService {
+	
+	@Autowired
+	private FornecedorClient fornecedorClient;
+	
+	public void realizaCompra(List<ItensDaCompraDTO> produtos) {
+		
+//		InfoFornecedorDTO info =  fornecedorClient.getInfoPorEstado(compra.getEndereco().getEstado());
+		
+		ItensDaCompraDTO itens = fornecedorClient.realizaPedido(produtos);
+		
+	}
+
+}
